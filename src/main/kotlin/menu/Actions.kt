@@ -52,6 +52,5 @@ val taskActions = mapOf(
     Actions.DELETE_TASK to ::deleteTasksFromMenu,
     Actions.COMPLETE_TASK to ::complete,
     Actions.UNCOMPLETE_TASK to ::uncomplete,
-    Actions.QUIT to ::quit,
+    Actions.QUIT to ::quit
 )
-

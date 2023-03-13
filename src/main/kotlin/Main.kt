@@ -4,8 +4,13 @@ import menu.taskActions
 fun renderMenu(): Int {
     println("=========================================================")
     val actions = listOf(
-        "Add task", "Delete task", "List all tasks", "List non-completed tasks",
-        "Complete task", "Uncomplete task", "Quit"
+        "Add task",
+        "Delete task",
+        "List all tasks",
+        "List non-completed tasks",
+        "Complete task",
+        "Uncomplete task",
+        "Quit"
     )
     actions.forEachIndexed { index, action ->
         println("${index + 1}. $action")
@@ -23,7 +28,7 @@ fun main() {
             val func = taskActions[Actions.values()[action - 1]]
             func?.call(repository)
         } catch (e: ArrayIndexOutOfBoundsException) {
-            //just skip
+            // just skip
         }
     }
 }
